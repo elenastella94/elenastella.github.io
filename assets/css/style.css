@@ -13,29 +13,6 @@
   color: white;
 }
 
-/* Remove card borders and shadows */
-.card {
-  border: none !important;
-  box-shadow: none !important;
-  background: #fff; /* keep clean white background */
-  border-radius: 0; /* or keep rounded if you like */
-}
-
-/* Research grid layout */
-.research-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* keeps cards even */
-  gap: 1.5rem; /* spacing between cards */
-}
-
-/* Ensure all cards align nicely */
-.research-grid .card {
-  display: flex;
-  flex-direction: column;
-}
-
-
-
 /* === Base Styles === */
 body {
   font-family: var(--font-body);
@@ -75,18 +52,33 @@ body {
   margin: 10px 0;
 }
 
+/* === Research Cards === */
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
 .research-card {
-  border: 1px solid #ccc;
-  padding: 1rem;
-  border-radius: 8px;
   background-color: var(--background-card);
-  margin-bottom: 1rem;
+  padding: 1.5rem;
+  border-radius: 12px;       /* subtle rounding */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* subtle shadow */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease; /* slight hover effect */
+}
+
+.research-card:hover {
+  transform: translateY(-3px);
 }
 
 .toggle-link {
   color: var(--primary-color);
   cursor: pointer;
   text-decoration: none; /* remove underline */
+  font-weight: 600;
+  margin-top: 0.5rem;
 }
 
 /* Smooth toggle for abstracts */
@@ -96,6 +88,7 @@ body {
   transition: max-height 0.5s ease, padding 0.5s ease;
   padding-top: 0;
   padding-bottom: 0;
+  margin-top: 0.3rem;
 }
 
 .abstract.open {
@@ -111,8 +104,7 @@ a {
 }
 
 a:hover {
-  color: #155a8a; /* slightly darker on hover */
-  text-decoration: none;
+  color: #155a8a;
 }
 
 /* Headings font */
@@ -139,7 +131,7 @@ h1, h2, h3 {
   }
 
   .research-card {
-    padding: 0.8rem;
+    padding: 1rem;
     font-size: 0.95rem;
   }
 }
