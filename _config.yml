@@ -1,9 +1,8 @@
 title: "Devis Decet"
 author: "Devis Decet"
-# email: "your.email@uni.edu"
 description: "Personal academic website"
-baseurl: "" # leave empty if hosted at username.github.io
-url: "https://username.github.io" # your GitHub Pages URL
+baseurl: "https://devisdecet.com"
+url: "https://devdecet.github.io" # your GitHub Pages URL
 
 markdown: kramdown
 theme: null # we use custom CSS
