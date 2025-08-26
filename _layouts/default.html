@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <script src="/assets/js/main.js" defer></script>
+  <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+  {% include google_tag.html %}
+</head>
+<body>
+<div class="container">
+  <!-- Left column -->
+  <div class="left-col">
+    <h1>{{ site.author }}</h1>
+    <img src="/assets/images/headshot.jpg" alt="{{ site.author }}">
+    <p>Email: <a>your.email@uni.edu</a></p>
+    <p><a href="/assets/pdf/decet_cv.pdf">Curriculum Vitae</a></p>
+    <!-- <hr class="crimson-line">
+    <nav>
+      <a href="#about">About</a><br>
+      <a href="#research">Research</a>
+    </nav> -->
+  </div>
+
+  <!-- Right column -->
+  <div class="right-col">
+    <section id="about">
+      {% include about.md %}
+    </section>
+
+    <hr class="crimson-line">
+
+    <section id="research">
+      {% include research.md %}
+    </section>
+  </div>
+</div>
+</body>
+</html>

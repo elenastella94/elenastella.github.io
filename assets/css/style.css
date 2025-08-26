@@ -1,0 +1,122 @@
+/* === Site Theme Variables === */
+:root {
+  --primary-color: #1f78c1;        /* main site color */
+  --background-left: #ffffff;      /* left column background */
+  --background-card: #ffffff;      /* research card background */
+  --font-body: "Inter", sans-serif; /* body font */
+  --font-heading: "Merriweather", serif; /* headings font */
+}
+
+/* === Custom Text Selection === */
+::selection {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* === Base Styles === */
+body {
+  font-family: var(--font-body);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: row; /* desktop default */
+}
+
+.left-col {
+  width: 250px;
+  background-color: var(--background-left);
+  padding: 2rem;
+  flex-shrink: 0;
+}
+
+.right-col {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.left-col img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.crimson-line {
+  border: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  margin: 10px 0;
+}
+
+.research-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: var(--background-card);
+  margin-bottom: 1rem;
+}
+
+.toggle-link {
+  color: var(--primary-color);
+  cursor: pointer;
+  text-decoration: none; /* remove underline */
+}
+
+/* Smooth toggle for abstracts */
+.abstract {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.abstract.open {
+  max-height: 1000px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* === Link Styling === */
+a {
+  color: var(--primary-color);
+  text-decoration: none; /* remove underline */
+}
+
+a:hover {
+  color: #155a8a; /* slightly darker on hover */
+  text-decoration: none;
+}
+
+/* Headings font */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+}
+
+/* === Mobile-Responsive Styles === */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* stack left and right columns */
+  }
+
+  .left-col {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .right-col {
+    width: 100%;
+    padding: 1rem;
+    overflow: visible;
+  }
+
+  .research-card {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+}
