@@ -1,16 +1,48 @@
+# Site settings
 title: "Devis Decet"
 author: "Devis Decet"
-description: "Personal academic website"
-baseurl: ""
-url: "https://devisdecet.com" # your GitHub Pages URL
+email: "ddecet@u.northwestern.edu"
+description: "Economist working on development, political, environmental and public economics."
 
+# GitHub Pages settings with custom domain
+baseurl: "" # Leave empty for custom domain
+url: "https://devisdecet.com" # Your custom domain
+
+# Build settings
 markdown: kramdown
-theme: null # we use custom CSS
-plugins: []
+highlighter: rouge
+permalink: pretty
 
-# Optional: exclude these files from build
+# GitHub Pages safe plugins only
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Kramdown settings
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Include and exclude
+include:
+  - _pages
+  - assets
+
 exclude:
-  - README.md
-  - node_modules
+  - vendor
   - Gemfile
   - Gemfile.lock
+  - README.md
+  - LICENSE
+  - node_modules
+  - "*.gem"
+  - "*.gemspec"
+
+# SEO settings
+lang: en_US
+
+# Academic settings
+scholar:
+  style: apa
+  locale: en
