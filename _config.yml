@@ -1,8 +1,8 @@
 title: "Devis Decet"
 author: "Devis Decet"
 description: "Personal academic website"
-baseurl: "https://devisdecet.com"
-url: "https://devdecet.github.io" # your GitHub Pages URL
+baseurl: ""
+url: "https://devisdecet.com" # your GitHub Pages URL
 
 markdown: kramdown
 theme: null # we use custom CSS
