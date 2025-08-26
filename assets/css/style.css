@@ -13,6 +13,29 @@
   color: white;
 }
 
+/* Remove card borders and shadows */
+.card {
+  border: none !important;
+  box-shadow: none !important;
+  background: #fff; /* keep clean white background */
+  border-radius: 0; /* or keep rounded if you like */
+}
+
+/* Research grid layout */
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* keeps cards even */
+  gap: 1.5rem; /* spacing between cards */
+}
+
+/* Ensure all cards align nicely */
+.research-grid .card {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
 /* === Base Styles === */
 body {
   font-family: var(--font-body);
