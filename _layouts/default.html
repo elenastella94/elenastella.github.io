@@ -22,22 +22,21 @@
   <!-- Right column -->
   <div class="right-col">
     <!-- About Section -->
-    <section id="about">
-      {% capture about_content %}{% include about.md %}{% endcapture %}
-      {{ about_content | markdownify }}
-    </section>
+      <section id="about">
+          {% include about.md %}
+      </section>
 
     <hr class="crimson-line">
 
     <!-- Research Section -->
     <section id="research">
-      {% capture research_content %}{% include research.md %}{% endcapture %}
       <div class="research-grid">
-        {{ research_content | markdownify }}
+           {% include research.md %}
       </div>
     </section>
+
   </div>
-</div>
+    </div>
 
 <script>
   // Smooth toggle for abstracts
