@@ -30,10 +30,12 @@
 
     <!-- Research Section -->
     <section id="research">
-      <div class="research-grid">
-           {% include research.md %}
-      </div>
-    </section>
+       <section id="research">
+  <div class="research-grid">
+    {{ content | markdownify }}
+  </div>
+</section>
+
 
   </div>
     </div>
