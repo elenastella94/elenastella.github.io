@@ -69,12 +69,10 @@ body {
 }
 
 .research-card {
-  background-color: var(--background-card);
+  background-color: var(--background-card); /* same as page background */
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease; /* slight hover effect */
-  border-radius: 6px;
 }
 
 .research-card:hover {
