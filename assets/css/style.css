@@ -33,12 +33,12 @@ body {
   background-color: var(--background-left);
   padding: 2rem;
   flex-shrink: 0;
-  position: sticky; /* fixed on scroll */
+  position: sticky; /* stays in place on scroll */
   top: 0;
   height: 100vh;
-  overflow: hidden;
   text-align: center;
 }
+
 
 .left-col img {
   width: 100%;
