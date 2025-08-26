@@ -147,30 +147,27 @@ p {
 
 /* === Research Grid === */
 .research-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 1.5rem;
+  display: block; /* Changed from grid to block for markdown compatibility */
   margin-top: 1rem;
 }
 
-/* === Research Cards (No Shadow) === */
-.research-card {
+/* === Research Paper Styling === */
+.research-grid > p {
   background-color: var(--background-card);
   padding: 1.5rem;
   border-radius: var(--border-radius);
   border: 1px solid var(--border-color);
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 1.5rem;
   transition: all var(--transition-fast);
   position: relative;
 }
 
-.research-card:hover {
+.research-grid > p:hover {
   transform: translateY(-2px);
   border-color: var(--primary-color);
 }
 
-.research-card::before {
+.research-grid > p::before {
   content: '';
   position: absolute;
   left: 0;
@@ -183,8 +180,18 @@ p {
   transition: opacity var(--transition-fast);
 }
 
-.research-card:hover::before {
+.research-grid > p:hover::before {
   opacity: 1;
+}
+
+/* Handle paper titles (strong tags) */
+.research-grid strong {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
 }
 
 /* === Paper Elements === */
