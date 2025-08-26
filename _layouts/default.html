@@ -19,25 +19,23 @@
     <p>Email: <a>ddecet@u.northwestern.edu</a></p>
     <p><a href="/assets/pdf/decet_cv.pdf">Curriculum Vitae</a></p>
   </div>
-  <!-- Right column -->
-  <div class="right-col">
-    <!-- About Section -->
-      <section id="about">
-          {% include about.md %}
-      </section>
+ <!-- Right column -->
+<div class="right-col">
+  <!-- About Section -->
+  <section id="about">
+    {% capture about_content %}{% include about.md %}{% endcapture %}
+    {{ about_content | markdownify }}
+  </section>
 
-    <hr class="crimson-line">
+  <hr class="crimson-line">
 
-    <!-- Research Section -->
-    <section id="research">
-       <section id="research">
-  <div class="research-grid">
-    {{ content | markdownify }}
-  </div>
-</section>
-
-
-  </div>
+  <!-- Research Section -->
+  <section id="research">
+    <div class="research-grid">
+      {% include research.md %}
+    </div>
+  </section>
+</div>
     </div>
 
 <script>
