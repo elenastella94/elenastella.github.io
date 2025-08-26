@@ -28,14 +28,13 @@
   <!-- Right column -->
   <div class="right-col">
     <section id="about">
-      {% include about.md %}
+      {{ include_relative "about.md" | markdownify }}
     </section>
-
-    <hr class="crimson-line">
 
     <section id="research">
-      {% include research.md %}
+      {{ include_relative "research.md" | markdownify }}
     </section>
+
   </div>
 </div>
 </body>
