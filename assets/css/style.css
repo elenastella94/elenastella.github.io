@@ -24,7 +24,7 @@ body {
 .container {
   display: flex;
   min-height: 100vh;
-  flex-direction: row; /* desktop default */
+  flex-direction: row;
 }
 
 /* === Left Column === */
@@ -33,12 +33,11 @@ body {
   background-color: var(--background-left);
   padding: 2rem;
   flex-shrink: 0;
-  position: sticky; /* stays in place on scroll */
+  position: sticky; 
   top: 0;
   height: 100vh;
   text-align: center;
 }
-
 
 .left-col img {
   width: 100%;
@@ -50,7 +49,7 @@ body {
 .right-col {
   flex: 1;
   padding: 2rem;
-  overflow-y: auto;
+  overflow: visible; /* prevents independent scroll */
 }
 
 /* === Section Divider === */
@@ -58,7 +57,7 @@ body {
   border: 0;
   height: 2px;
   background-color: var(--primary-color);
-  margin: 10px 0;
+  margin: 20px 0; /* bigger spacing before WIP */
 }
 
 /* === Research Cards === */
@@ -69,21 +68,18 @@ body {
 }
 
 .research-card {
-  background-color: var(--background-card); /* same as page background */
+  background-color: var(--background-card); 
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-}
-
-.research-card:hover {
-  transform: translateY(-3px);
+  transition: none; /* remove hover translate to keep flat */
 }
 
 /* === Toggle Links === */
 .toggle-link {
   color: var(--primary-color);
   cursor: pointer;
-  text-decoration: none; /* remove underline */
+  text-decoration: none;
   font-weight: 600;
   margin-top: 0.5rem;
 }
@@ -92,8 +88,8 @@ body {
   text-decoration: underline;
 }
 
-/* Smooth toggle for abstracts and coverage */
-.toggle-content {
+/* === Abstract Toggle === */
+.abstract {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease, padding 0.5s ease;
@@ -102,8 +98,8 @@ body {
   margin-top: 0.3rem;
 }
 
-.toggle-content.open {
-  max-height: 1000px; /* long enough for abstracts */
+.abstract.open {
+  max-height: 1000px;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
@@ -127,7 +123,7 @@ h1, h2, h3 {
 /* === Mobile-Responsive Styles === */
 @media (max-width: 768px) {
   .container {
-    flex-direction: column; /* stack left and right columns */
+    flex-direction: column;
   }
 
   .left-col {
@@ -136,13 +132,12 @@ h1, h2, h3 {
     font-size: 1.05rem;
     text-align: center;
     height: auto;
-    position: relative; /* remove sticky for mobile */
+    position: relative;
   }
 
   .right-col {
     width: 100%;
     padding: 1rem;
-    overflow: visible;
   }
 
   .research-card {

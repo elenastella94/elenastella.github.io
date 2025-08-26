@@ -2,56 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>{{ page.title }} | {{ site.title }}</title>
+  <title>{{ page.title }} | Devis Decet</title>
   <link rel="stylesheet" href="/assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
   <script src="/assets/js/main.js" defer></script>
   <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
-  {% include google_tag.html %}
 </head>
 <body>
 <div class="container">
   <!-- Left column -->
   <div class="left-col">
-    <h1>{{ site.author }}</h1>
-    <img src="/assets/images/dev_pic.jpg" alt="{{ site.author }}">
+    <h1>Devis Decet</h1>
+    <img src="/assets/images/dev_pic.jpg" alt="Devis Decet">
     <p>Email: <a>ddecet@u.northwestern.edu</a></p>
     <p><a href="/assets/pdf/decet_cv.pdf">Curriculum Vitae</a></p>
   </div>
- <!-- Right column -->
-<div class="right-col">
-  <!-- About Section -->
-  <section id="about">
-    {% capture about_content %}{% include about.md %}{% endcapture %}
-    {{ about_content | markdownify }}
-  </section>
 
-  <hr class="crimson-line">
+  <!-- Right column -->
+  <div class="right-col">
+    <!-- About Section -->
+    <section id="about">
+      {% capture about_content %}{% include about.md %}{% endcapture %}
+      {{ about_content | markdownify }}
+    </section>
 
-  <!-- Research Section -->
-  <section id="research">
-    <div class="research-grid">
-      {% include research.md %}
-    </div>
-  </section>
+    <hr class="crimson-line">
+
+    <!-- Research Section -->
+    <section id="research">
+      {% capture research_content %}{% include research.md %}{% endcapture %}
+      <div class="research-grid">
+        {{ research_content | markdownify }}
+      </div>
+    </section>
+  </div>
 </div>
-    </div>
-
-<script>
-  // Smooth toggle for abstracts
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.toggle-link').forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        const target = document.getElementById(link.dataset.target);
-        if(target){
-          target.classList.toggle('open');
-        }
-      });
-    });
-  });
-</script>
 
 </body>
 </html>
