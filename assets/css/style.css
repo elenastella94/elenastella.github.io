@@ -18,6 +18,7 @@ body {
   font-family: var(--font-body);
   margin: 0;
   padding: 0;
+  color: #222;
 }
 
 .container {
@@ -26,17 +27,17 @@ body {
   flex-direction: row; /* desktop default */
 }
 
+/* === Left Column === */
 .left-col {
   width: 250px;
   background-color: var(--background-left);
   padding: 2rem;
   flex-shrink: 0;
-}
-
-.right-col {
-  flex: 1;
-  padding: 2rem;
-  overflow-y: auto;
+  position: sticky; /* fixed on scroll */
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
 }
 
 .left-col img {
@@ -45,6 +46,14 @@ body {
   margin-bottom: 1rem;
 }
 
+/* === Right Column === */
+.right-col {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+/* === Section Divider === */
 .crimson-line {
   border: 0;
   height: 2px;
@@ -65,12 +74,14 @@ body {
   display: flex;
   flex-direction: column;
   transition: transform 0.2s ease; /* slight hover effect */
+  border-radius: 6px;
 }
 
 .research-card:hover {
   transform: translateY(-3px);
 }
 
+/* === Toggle Links === */
 .toggle-link {
   color: var(--primary-color);
   cursor: pointer;
@@ -79,8 +90,12 @@ body {
   margin-top: 0.5rem;
 }
 
-/* Smooth toggle for abstracts */
-.abstract {
+.toggle-link:hover {
+  text-decoration: underline;
+}
+
+/* Smooth toggle for abstracts and coverage */
+.toggle-content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease, padding 0.5s ease;
@@ -89,8 +104,8 @@ body {
   margin-top: 0.3rem;
 }
 
-.abstract.open {
-  max-height: 1000px;
+.toggle-content.open {
+  max-height: 1000px; /* long enough for abstracts */
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
@@ -98,16 +113,17 @@ body {
 /* === Link Styling === */
 a {
   color: var(--primary-color);
-  text-decoration: none; /* remove underline */
+  text-decoration: none;
 }
 
 a:hover {
   color: #155a8a;
 }
 
-/* Headings font */
+/* === Headings === */
 h1, h2, h3 {
   font-family: var(--font-heading);
+  color: #222;
 }
 
 /* === Mobile-Responsive Styles === */
@@ -119,7 +135,10 @@ h1, h2, h3 {
   .left-col {
     width: 100%;
     padding: 1rem;
+    font-size: 1.05rem;
     text-align: center;
+    height: auto;
+    position: relative; /* remove sticky for mobile */
   }
 
   .right-col {
@@ -129,7 +148,7 @@ h1, h2, h3 {
   }
 
   .research-card {
-    padding: 1rem;
+    padding: 0.8rem;
     font-size: 0.95rem;
   }
 }

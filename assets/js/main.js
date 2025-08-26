@@ -1,75 +1,66 @@
 // Wait until DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-  
-  // === Abstract Toggle Functionality ===
+
+  // === Toggle Functionality for Abstracts / Coverage ===
   const toggleLinks = document.querySelectorAll('.toggle-link');
 
   toggleLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      // Prevent default link behavior
-      e.preventDefault();
-      
-      const targetId = link.getAttribute('data-target');
-      const targetEl = document.getElementById(targetId);
-
-      if (targetEl) {
-        const isOpen = targetEl.classList.contains('open');
-        
-        // Toggle the abstract
-        targetEl.classList.toggle('open');
-        
-        // Update button text for better UX
-        if (isOpen) {
-          link.textContent = 'Abstract';
-          link.setAttribute('aria-expanded', 'false');
-        } else {
-          link.textContent = 'Hide Abstract';
-          link.setAttribute('aria-expanded', 'true');
-        }
-        
-        // Smooth scroll to the element if abstract is opening
-        if (!isOpen) {
-          setTimeout(() => {
-            if (!isElementInViewport(targetEl)) {
-              targetEl.scrollIntoView({
-                behavior: 'smooth',
-                block: 'nearest'
-              });
-            }
-          }, 100);
-        }
-      }
-    });
-    
     // Initialize aria attributes for accessibility
     link.setAttribute('aria-expanded', 'false');
     link.setAttribute('role', 'button');
+
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const targetId = link.dataset.target;
+      const targetEl = document.getElementById(targetId);
+
+      if (!targetEl) return;
+
+      const isOpen = targetEl.classList.contains('open');
+
+      // Toggle content
+      targetEl.classList.toggle('open');
+
+      // Update link text for better UX
+      if (isOpen) {
+        link.textContent = link.dataset.originalText || 'Abstract';
+        link.setAttribute('aria-expanded', 'false');
+      } else {
+        // Save original text if not saved
+        if (!link.dataset.originalText) link.dataset.originalText = link.textContent;
+        link.textContent = 'Hide Abstract';
+        link.setAttribute('aria-expanded', 'true');
+      }
+
+      // Smooth scroll to the element if opening
+      if (!isOpen) {
+        setTimeout(() => {
+          if (!isElementInViewport(targetEl)) {
+            targetEl.scrollIntoView({
+              behavior: 'smooth',
+              block: 'nearest'
+            });
+          }
+        }, 100);
+      }
+    });
   });
 
   // === Email Protection ===
-  const emailElements = document.querySelectorAll('a[href=""]');
-  emailElements.forEach(el => {
-    const emailText = el.textContent;
-    if (emailText.includes('@') && emailText.includes('.')) {
-      el.href = `mailto:${emailText}`;
-      el.title = `Send email to ${emailText}`;
-    }
-  });
-
-  // === Fix email links without href ===
-  const emailLinks = document.querySelectorAll('a:not([href])');
-  emailLinks.forEach(el => {
+  document.querySelectorAll('a[href=""], a:not([href])').forEach(el => {
     const text = el.textContent;
     if (text.includes('@')) {
       el.href = `mailto:${text}`;
+      el.title = `Send email to ${text}`;
     }
   });
 
 });
 
 // === Utility Functions ===
-function isElementInViewport(element) {
-  const rect = element.getBoundingClientRect();
+function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
   return (
     rect.top >= 0 &&
     rect.left >= 0 &&
@@ -78,16 +69,13 @@ function isElementInViewport(element) {
   );
 }
 
-// === Performance Optimizations ===
+// === Scroll Performance Optimization ===
 let ticking = false;
-
-function updateOnScroll() {
-  ticking = false;
-}
-
 window.addEventListener('scroll', () => {
   if (!ticking) {
-    requestAnimationFrame(updateOnScroll);
+    requestAnimationFrame(() => {
+      ticking = false;
+    });
     ticking = true;
   }
 });
