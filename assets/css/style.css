@@ -1,22 +1,10 @@
 /* === Site Theme Variables === */
 :root {
   --primary-color: #1f78c1;        /* main site color */
-  --primary-hover: #155a8a;        /* primary color on hover */
-  --text-primary: #2c3e50;         /* primary text color */
-  --text-secondary: #555555;       /* secondary text color */
-  --text-muted: #666666;           /* muted text color */
-  --background-main: #ffffff;      /* main background */
   --background-left: #ffffff;      /* left column background */
   --background-card: #ffffff;      /* research card background */
-  --background-accent: #f8f9fa;    /* accent backgrounds */
-  --border-color: #e9ecef;         /* border color */
-  --border-accent: #ddd;           /* accent border color */
   --font-body: "Inter", sans-serif; /* body font */
   --font-heading: "Merriweather", serif; /* headings font */
-  --shadow-subtle: 0 1px 3px rgba(0,0,0,0.1);
-  --border-radius: 8px;            /* consistent border radius */
-  --transition-fast: 0.2s ease;    /* fast transitions */
-  --transition-medium: 0.3s ease;  /* medium transitions */
 }
 
 /* === Custom Text Selection === */
@@ -26,359 +14,103 @@
 }
 
 /* === Base Styles === */
-* {
-  box-sizing: border-box;
-}
-
 body {
   font-family: var(--font-body);
   margin: 0;
   padding: 0;
-  background-color: var(--background-main);
-  color: var(--text-primary);
-  line-height: 1.6;
 }
 
-/* === Layout Container === */
 .container {
   display: flex;
   min-height: 100vh;
-  max-width: 1400px;
-  margin: 0 auto;
   flex-direction: row; /* desktop default */
 }
 
-/* === Left Column === */
 .left-col {
-  width: 280px;
+  width: 250px;
   background-color: var(--background-left);
   padding: 2rem;
   flex-shrink: 0;
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  overflow-y: auto;
-  border-right: 1px solid var(--border-color);
 }
 
-.left-col h1 {
-  font-family: var(--font-heading);
-  font-size: 1.8rem;
-  color: var(--text-primary);
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-  line-height: 1.2;
+.right-col {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
 }
 
 .left-col img {
   width: 100%;
-  max-width: 220px;
-  border-radius: var(--border-radius);
-  margin-bottom: 1.5rem;
-  transition: transform var(--transition-fast);
-}
-
-.left-col img:hover {
-  transform: scale(1.02);
-}
-
-.left-col p {
+  border-radius: 8px;
   margin-bottom: 1rem;
-  color: var(--text-secondary);
-  font-size: 0.95rem;
 }
 
-.left-col a {
-  color: var(--primary-color);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color var(--transition-fast);
-}
-
-.left-col a:hover {
-  color: var(--primary-hover);
-  text-decoration: underline;
-}
-
-/* === Right Column === */
-.right-col {
-  flex: 1;
-  padding: 2rem 3rem;
-  overflow-y: auto;
-}
-
-/* === Headings === */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  color: var(--text-primary);
-  margin-top: 0;
-}
-
-h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-  border-bottom: 2px solid var(--primary-color);
-  padding-bottom: 0.5rem;
-}
-
-h3 {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  color: var(--text-primary);
-}
-
-/* === Paragraphs === */
-p {
-  margin-bottom: 1rem;
-  color: var(--text-secondary);
-  text-align: justify;
-}
-
-/* === Crimson Line Separator === */
 .crimson-line {
   border: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--primary-color), #4a90e2);
-  margin: 2rem 0;
-  border-radius: 1px;
+  background-color: var(--primary-color);
+  margin: 10px 0;
 }
 
-/* === Research Grid === */
+/* === Research Cards === */
 .research-grid {
-  display: block; /* Changed from grid to block for markdown compatibility */
-  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
 }
 
-/* === Research Paper Styling === */
-.research-grid > p {
+.research-card {
   background-color: var(--background-card);
   padding: 1.5rem;
-  border-radius: var(--border-radius);
-  border: 1px solid var(--border-color);
-  margin-bottom: 1.5rem;
-  transition: all var(--transition-fast);
-  position: relative;
-}
-
-.research-grid > p:hover {
-  transform: translateY(-2px);
-  border-color: var(--primary-color);
-}
-
-.research-grid > p::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background-color: var(--primary-color);
-  border-radius: var(--border-radius) 0 0 var(--border-radius);
-  opacity: 0;
-  transition: opacity var(--transition-fast);
-}
-
-.research-grid > p:hover::before {
-  opacity: 1;
-}
-
-/* Handle paper titles (strong tags) */
-.research-grid strong {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  display: block;
-  margin-bottom: 0.5rem;
-  line-height: 1.4;
-}
-
-/* === Paper Elements === */
-.paper-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 0.5rem;
-  line-height: 1.4;
-}
-
-.paper-authors {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  margin-bottom: 0.5rem;
-}
-
-.paper-venue {
-  color: var(--primary-color);
-  font-style: italic;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-  font-weight: 500;
-}
-
-.paper-links {
-  margin-top: 1rem;
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  flex-direction: column;
+  transition: transform 0.2s ease; /* slight hover effect */
 }
 
-.paper-links a {
-  display: inline-block;
-  background-color: var(--background-accent);
-  color: var(--primary-color);
-  padding: 0.4rem 0.8rem;
-  border-radius: calc(var(--border-radius) / 2);
-  text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: 500;
-  border: 1px solid var(--border-color);
-  transition: all var(--transition-fast);
+.research-card:hover {
+  transform: translateY(-3px);
 }
 
-.paper-links a:hover {
-  background-color: var(--primary-color);
-  color: white;
-  border-color: var(--primary-color);
-}
-
-/* === Toggle Abstract Functionality === */
 .toggle-link {
   color: var(--primary-color);
   cursor: pointer;
-  text-decoration: none;
+  text-decoration: none; /* remove underline */
   font-weight: 600;
   margin-top: 0.5rem;
-  font-size: 0.9rem;
-  transition: color var(--transition-fast);
 }
 
-.toggle-link:hover {
-  color: var(--primary-hover);
-  text-decoration: underline;
-}
-
+/* Smooth toggle for abstracts */
 .abstract {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.4s ease;
-  background-color: var(--background-accent);
-  margin-top: 1rem;
-  border-radius: var(--border-radius);
-  border-left: 3px solid var(--primary-color);
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0.3rem;
 }
 
 .abstract.open {
-  max-height: 500px;
-  padding: 1rem;
+  max-height: 1000px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
-.abstract p {
-  font-size: 0.92rem;
-  line-height: 1.6;
-  color: var(--text-secondary);
-  margin: 0;
-  text-align: left;
-}
-
-/* === Lists === */
-ul, ol {
-  margin: 1rem 0;
-  padding-left: 1.5rem;
-}
-
-li {
-  margin-bottom: 0.5rem;
-  color: var(--text-secondary);
-}
-
-/* === Links === */
+/* === Link Styling === */
 a {
   color: var(--primary-color);
-  text-decoration: none;
-  transition: color var(--transition-fast);
+  text-decoration: none; /* remove underline */
 }
 
 a:hover {
-  color: var(--primary-hover);
+  color: #155a8a;
 }
 
-/* === Blockquotes === */
-blockquote {
-  border-left: 4px solid var(--primary-color);
-  padding-left: 1rem;
-  margin: 1.5rem 0;
-  font-style: italic;
-  color: var(--text-muted);
-  background-color: var(--background-accent);
-  padding: 1rem;
-  border-radius: 0 var(--border-radius) var(--border-radius) 0;
-}
-
-/* === Code === */
-code {
-  background-color: var(--background-accent);
-  padding: 0.2rem 0.4rem;
-  border-radius: calc(var(--border-radius) / 2);
-  font-family: 'Monaco', 'Consolas', monospace;
-  font-size: 0.9em;
-  color: #e74c3c;
-}
-
-pre {
-  background-color: var(--background-accent);
-  padding: 1rem;
-  border-radius: var(--border-radius);
-  overflow-x: auto;
-  margin: 1rem 0;
-  border-left: 3px solid var(--primary-color);
-}
-
-pre code {
-  background: none;
-  padding: 0;
-  color: var(--text-primary);
-}
-
-/* === Tables === */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.5rem 0;
-  background-color: var(--background-card);
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  border: 1px solid var(--border-color);
-}
-
-th, td {
-  padding: 0.75rem;
-  text-align: left;
-  border-bottom: 1px solid var(--border-color);
-}
-
-th {
-  background-color: var(--background-accent);
-  font-weight: 600;
-  color: var(--text-primary);
-}
-
-tr:hover {
-  background-color: var(--background-accent);
+/* Headings font */
+h1, h2, h3 {
+  font-family: var(--font-heading);
 }
 
 /* === Mobile-Responsive Styles === */
-@media (max-width: 1024px) {
-  .right-col {
-    padding: 2rem;
-  }
-  
-  .research-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 @media (max-width: 768px) {
   .container {
     flex-direction: column; /* stack left and right columns */
@@ -386,107 +118,18 @@ tr:hover {
 
   .left-col {
     width: 100%;
-    height: auto;
-    position: static;
-    padding: 1.5rem;
+    padding: 1rem;
     text-align: center;
-    border-right: none;
-    border-bottom: 1px solid var(--border-color);
-  }
-
-  .left-col h1 {
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
-  }
-
-  .left-col img {
-    max-width: 180px;
-    margin-bottom: 1rem;
   }
 
   .right-col {
     width: 100%;
-    padding: 1.5rem;
+    padding: 1rem;
     overflow: visible;
   }
 
   .research-card {
-    padding: 1.25rem;
-  }
-
-  .paper-title {
-    font-size: 1.1rem;
-  }
-
-  .paper-links {
-    gap: 0.25rem;
-  }
-
-  .paper-links a {
-    font-size: 0.8rem;
-    padding: 0.3rem 0.6rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .left-col {
     padding: 1rem;
-  }
-
-  .right-col {
-    padding: 1rem;
-  }
-
-  .left-col h1 {
-    font-size: 1.4rem;
-  }
-
-  .research-card {
-    padding: 1rem;
-  }
-
-  .research-grid {
-    gap: 1rem;
-  }
-
-  h2 {
-    font-size: 1.3rem;
-  }
-}
-
-/* === Print Styles === */
-@media print {
-  .container {
-    flex-direction: column;
-  }
-  
-  .left-col {
-    width: 100%;
-    position: static;
-    height: auto;
-    border: none;
-  }
-  
-  .research-card {
-    break-inside: avoid;
-    border: 1px solid var(--border-accent);
-  }
-  
-  .toggle-link {
-    display: none;
-  }
-  
-  .abstract {
-    max-height: none;
-    padding: 1rem;
-    background-color: var(--background-accent);
-  }
-  
-  .crimson-line {
-    background: var(--text-primary);
+    font-size: 0.95rem;
   }
 }
