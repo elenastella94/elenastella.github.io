@@ -7,7 +7,7 @@ description: "Economist working on corporate finance and applied microeconomics.
 # GitHub Pages settings with custom domain
 baseurl: "" # Leave empty for custom domain
 #url: "https://elena-stella.com" # Your custom domain
-url: "https://elenastella.github.io" # Your custom domain
+url: "https://elena-stella.com" # Your custom domain
 
 
 # Build settings
