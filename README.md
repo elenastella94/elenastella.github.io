@@ -14,5 +14,15 @@ Pushing:
 cd /Users/devisdecet/Dropbox/projects/outreach/devdecet.github
 git remote -v 
 
+# stage all changes
+git add .
+
+# commit with a short message
+git commit -m "Update website"
+
+# push to GitHub (main branch)
+git push origin main
+
+
 -->
 

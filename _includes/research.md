@@ -2,7 +2,7 @@
 
 **Organizing Fiscal Capacity**  
 *New version with updated data coming soon*  
-[Abstract](#){: .toggle-link data-target="paper1" }
+[Abstract](#){: .toggle-link data-target="paper1" } | [Best Paper World Bank Conference on Public Institutions](https://www.worldbank.org/en/events/2024/06/28/world-bank-conference-public-institutions-enabling-the-private-sector)
 
 <div id="paper1" class="abstract">
 This paper studies how the allocation of tax agents across the national territory affects fiscal capacity. I evaluate a reform of the Brazilian tax authority that consolidated half of the existing local tax offices. Leveraging regional variation in the reform and newly collected data, I employ a matched difference-in-differences strategy to document how areas served by consolidated offices experience an increase in tax revenues. The reform also led to a divergence in tax enforcement between the core and the periphery of consolidated regions. These results are explained by a trade-off between improved targeting of high-revenue potential areas and increased distance between tax offices and the areas they oversee. These findings suggest that concentrating tax agents in fewer, larger offices increases overall revenues but exacerbates regional inequality in tax enforcement.
@@ -24,7 +24,7 @@ We study the relationship between access to water resources and local violence i
 In contexts where child labour is pervasive, household decisions about allocating children's time between school and work involve a trade-off: current returns from child labour versus future returns from education. This paper tests for the existence of a third factor: future returns from child labour, as parents view farm work as an investment in agricultural skills. We provide evidence on each component of this trade-off in the context of rural Ghana by leveraging four waves of survey data on 5,000 households, exogenous shocks to agricultural productivity, and a vignette survey design to elicit parental beliefs.
 </div>
 
----
+<!-- --- -->
 
 ## Work in Progress
 
