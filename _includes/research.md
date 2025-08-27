@@ -1,6 +1,6 @@
 ## Working Papers
 
-**Organizing Fiscal Capacity**
+**Organizing Fiscal Capacity** 
 *New version with updated data coming soon*  
 [Abstract](#){: .toggle-link data-target="paper1" }
 
