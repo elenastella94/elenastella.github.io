@@ -1,8 +1,6 @@
-I am an economist with interests in development, political, environmental and public economics.
+I am a Ph.D. candidate in ???? Economics from Northwestern ????. You can find my CV [here](/assets/pdf/stella_cv.pdf).
 
-In my research, I leverage quasi-experimental methods, administrative data, large-scale surveys, and geospatial data to study questions related to state capacity, environmental conservation, conflict, and human capital.
+My research interests are in ????.
 
-I received my Ph.D. in Economics from Northwestern in June 2025. You can find my CV [here](/assets/pdf/decet_cv.pdf).
-
-Email: *ddecet@u.northwestern.edu*   
+Email: *elena.stella@kellogg.northwestern.edu*   
 
