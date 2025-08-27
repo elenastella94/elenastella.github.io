@@ -1,4 +1,4 @@
-Personal academic page of Devis Decet.
+Personal academic page of Elena Stella.
 
 
 ## How to link personal domain to the github page?
