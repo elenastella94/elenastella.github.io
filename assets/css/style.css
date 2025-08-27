@@ -61,9 +61,11 @@ body {
 }
 
 /* === Research Cards === */
+
+/* Make research items stack vertically */
 .research-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
 }
 
@@ -96,6 +98,7 @@ body {
   padding-top: 0;
   padding-bottom: 0;
   margin-top: 0.3rem;
+  text-align: justify;
 }
 
 .abstract.open {
