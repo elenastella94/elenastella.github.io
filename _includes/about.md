@@ -4,5 +4,5 @@ In my research, I leverage quasi-experimental methods, administrative data, larg
 
 I received my Ph.D. in Economics from Northwestern in 2025.
 
-Email: *ddecet@u.northwestern.edu*
-[Curriculum Vitae](/assets/pdf/decet_cv.pdf)
+Email: *ddecet@u.northwestern.edu*   
+[CV](/assets/pdf/decet_cv.pdf)
