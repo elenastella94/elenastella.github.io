@@ -29,18 +29,20 @@ body {
 
 /* === Left Column === */
 .left-col {
-  width: 250px;
+  width: 320px; /* Increased from 250px */
   background-color: var(--background-left);
-  padding: 2rem;
+  padding: 3rem 2.5rem; /* Increased vertical padding */
   flex-shrink: 0;
   position: sticky; 
   top: 0;
   height: 100vh;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .left-col img {
   width: 100%;
+  max-width: 280px; /* Prevent image from being too large */
   border-radius: 8px;
   margin-bottom: 1rem;
 }
@@ -48,8 +50,10 @@ body {
 /* === Right Column === */
 .right-col {
   flex: 1;
-  padding: 2rem;
+  padding: 3rem 4rem; /* Significantly increased padding */
   overflow: visible; /* prevents independent scroll */
+  max-width: calc(100vw - 320px); /* Prevent overflow on smaller screens */
+  box-sizing: border-box;
 }
 
 /* === Section Divider === */
@@ -57,7 +61,7 @@ body {
   border: 0;
   height: 2px;
   background-color: var(--primary-color);
-  margin: 20px 0; /* bigger spacing before WIP */
+  margin: 30px 0; /* Increased spacing */
 }
 
 /* === Research Cards === */
@@ -66,15 +70,16 @@ body {
 .research-grid {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem; /* Increased gap */
 }
 
 .research-card {
   background-color: var(--background-card); 
-  padding: 1.5rem;
+  padding: 2rem; /* Increased padding */
   display: flex;
   flex-direction: column;
   transition: none; /* remove hover translate to keep flat */
+  margin-bottom: 1rem;
 }
 
 /* === Toggle Links === */
@@ -83,7 +88,7 @@ body {
   cursor: pointer;
   text-decoration: none;
   font-weight: normal;
-  margin-top: 0.5rem;
+  margin-top: 0.75rem; /* Slightly increased */
 }
 
 .toggle-link:hover {
@@ -97,14 +102,14 @@ body {
   transition: max-height 0.5s ease, padding 0.5s ease;
   padding-top: 0;
   padding-bottom: 0;
-  margin-top: 0.3rem;
+  margin-top: 0.5rem; /* Increased margin */
   text-align: justify;
 }
 
 .abstract.open {
   max-height: 1000px;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.75rem; /* Increased padding */
+  padding-bottom: 0.75rem;
 }
 
 /* === Link Styling === */
@@ -124,27 +129,184 @@ h1, h2, h3 {
 }
 
 /* === Mobile-Responsive Styles === */
+
+/* Tablet styles */
+@media (max-width: 1200px) {
+  .left-col {
+    width: 280px; /* Slightly smaller on tablets */
+    padding: 2.5rem 2rem;
+  }
+  
+  .right-col {
+    padding: 2.5rem 3rem;
+    max-width: calc(100vw - 280px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .left-col {
+    width: 260px;
+    padding: 2rem 1.5rem;
+  }
+  
+  .right-col {
+    padding: 2rem 2.5rem;
+    max-width: calc(100vw - 260px);
+  }
+  
+  .research-grid {
+    gap: 1.5rem;
+  }
+  
+  .research-card {
+    padding: 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .container {
-    flex-direction: column;
+    flex-direction: column; /* stack left and right columns */
   }
 
   .left-col {
     width: 100%;
-    padding: 1rem;
-    font-size: 1.05rem;
-    text-align: center;
     height: auto;
-    position: relative;
+    position: static;
+    padding: 2rem 1.5rem; /* Maintained broader padding */
+    text-align: center;
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .left-col h1 {
+    font-size: 1.8rem; /* Slightly larger */
+    margin-bottom: 1.5rem;
+  }
+
+  .left-col img {
+    max-width: 200px; /* Slightly larger on mobile */
+    margin-bottom: 1.5rem;
   }
 
   .right-col {
     width: 100%;
-    padding: 1rem;
+    padding: 2rem 1.5rem; /* Maintained broader padding */
+    overflow: visible;
+    max-width: 100%;
   }
 
   .research-card {
-    padding: 0.8rem;
-    font-size: 0.95rem;
+    padding: 1.5rem; /* Maintained broader padding */
+    margin-bottom: 1.5rem;
+  }
+
+  .research-grid {
+    gap: 1.5rem;
+  }
+
+  .paper-title {
+    font-size: 1.2rem; /* Slightly larger */
+  }
+
+  .paper-links {
+    gap: 0.5rem; /* Increased gap */
+  }
+
+  .paper-links a {
+    font-size: 0.9rem; /* Slightly larger */
+    padding: 0.4rem 0.8rem; /* More padding */
+  }
+
+  h2 {
+    font-size: 1.6rem; /* Larger headings */
+  }
+  
+  .crimson-line {
+    margin: 25px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .left-col {
+    padding: 1.5rem 1rem; /* Still broader than original */
+  }
+
+  .right-col {
+    padding: 1.5rem 1rem; /* Still broader than original */
+  }
+
+  .left-col h1 {
+    font-size: 1.6rem;
+  }
+
+  .research-card {
+    padding: 1.25rem; /* Still broader than original */
+  }
+
+  .research-grid {
+    gap: 1.25rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+  
+  .crimson-line {
+    margin: 20px 0;
+  }
+}
+
+/* === Very small screens === */
+@media (max-width: 360px) {
+  .left-col {
+    padding: 1rem 0.75rem;
+  }
+
+  .right-col {
+    padding: 1rem 0.75rem;
+  }
+  
+  .research-card {
+    padding: 1rem;
+  }
+}
+
+/* === Print Styles === */
+@media print {
+  .container {
+    flex-direction: column;
+  }
+  
+  .left-col {
+    width: 100%;
+    position: static;
+    height: auto;
+    border: none;
+    padding: 2rem;
+  }
+  
+  .right-col {
+    padding: 2rem;
+  }
+  
+  .research-card {
+    break-inside: avoid;
+    border: 1px solid #e0e0e0;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .toggle-link {
+    display: none;
+  }
+  
+  .abstract {
+    max-height: none;
+    padding: 1rem;
+    background-color: #f5f5f5;
+  }
+  
+  .crimson-line {
+    background: #222;
   }
 }
