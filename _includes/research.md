@@ -10,5 +10,4 @@ How do transparency requirements affect firms affiliated with organized crime? T
 <div id="paper3" class="abstract">
 This paper provides novel evidence on how political connections distort environmental regulatory enforcement in the Maharashtrian Sugar Industry, using a unique natural experiment that creates simultaneous bidirectional variation in political access. We exploit the 2022 political crisis in Maharashtra, India, which caused some sugar mills to suddenly lose cabinet access while others gained it. Combining novel data on regulatory punishment, environmental & operational outcomes for sugar mills, we find that mills losing political access experience significantly higher enforcement rates, while mills gaining connections face no change in regulatory pressure. This effect is driven entirely by discretionary enforcement rather than complaint-driven inspections. Using granular emissions monitoring data, we show that this is not driven by changes in environmental performance by mills who lose cabinet access, while mills gaining connections significantly increase pollution-hiding behavior yet face no regulatory consequences. These findings demonstrate systematic heterogeneity in environmental enforcement in a weak institution setting.
 </div>
-<!-- --- -->
-## Work in Progress
+<!-- ## Work in Progress -->
