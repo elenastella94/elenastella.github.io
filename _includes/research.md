@@ -13,5 +13,5 @@ This paper provides novel evidence on how political connections distort environm
 </div>
 
 ## Work in Progress
-**Improving Monitoring with Machine-Learning**  
+**The Value of Information for Regulatory Enforcement**  
 *(with Elliott Ash, Maddalena Ronchi, and Silvia Vannutelli)*
