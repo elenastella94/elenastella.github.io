@@ -12,7 +12,11 @@ Can transparency requirements deter organized crime, and what are the long-run c
 This paper provides novel evidence on how political connections distort environmental regulatory enforcement in Maharashtra's Sugar Industry, using a unique natural experiment that creates simultaneous bidirectional variation in political access. We exploit a political crisis in Maharashtra, India, which caused some sugar mills to suddenly lose political connections while others gained it. Combining novel data on regulatory punishment, environmental & operational outcomes for sugar mills, we find that mills losing political access experience significantly higher enforcement rates, while mills gaining connections face no change in regulatory pressure. This effect is driven entirely by discretionary enforcement rather than complaint-driven inspections. Using granular emissions monitoring data, we show that this is not driven by changes in environmental performance by mills who lose political connections, while mills gaining connections significantly increase pollution-hiding behavior yet face no regulatory consequences. These findings demonstrate systematic heterogeneity in environmental enforcement in a weak institution setting.
 </div>
 
-
 ## Work in Progress
 **The Value of Information for Regulatory Enforcement**  
-*(with Elliott Ash, Maddalena Ronchi, and Silvia Vannutelli)*
+*(with Elliott Ash, Maddalena Ronchi, and Silvia Vannutelli)*  
+[Abstract](#){: .toggle-link data-target="paper4" } <!-- | [PDF](#) -->
+<div id="paper4" class="abstract">
+How does the quality of information affect the allocation of regulatory enforcement? We study this question in the context of the Italian Court of Auditors, a large bureaucracy that oversees municipal finances through a hierarchical structure. Local auditors gather information on municipalities and report to judges, who decide whether to issue enforcement deliberations. We exploit a reform that randomized auditor assignments, increasing auditor independence without changing judicial rules. Combining novel administrative records with a machine-learning measure of predicted municipal default, we find that judicial enforcement increased overall, with the largest gains in high-risk municipalities. This targeting improvement arises through two channels. First, auditors report more financial irregularities after random assignment, especially in high-risk municipalities and where pre-reform local ties were stronger. Second, experienced judges use these improved signals to focus deliberations on high-risk cases, highlighting the complementarity between information quality and decision-makers' expertise.
+</div>
+
