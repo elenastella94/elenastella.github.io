@@ -21,6 +21,7 @@ How does the quality of information affect the allocation of regulatory enforcem
 
 ## Work in Progress
 **Who Gets Approved? Political Influence in Los Angeles’ Discretionary Entitlement Process**  
+*(with [Efraim Benmelech](https://effibenmelech.com/bio/))*  
 [Abstract](#){: .toggle-link data-target="paper5" } <!-- | [PDF](#) -->
 <div id="paper5" class="abstract">
 This project investigates how political connections shape discretionary land-use decisions. We study the City of Los Angeles’s discretionary entitlement process, where both elected officials and planning staff exert substantial influence over the approval of land-use development projects. We assemble a new dataset covering every entitlement application filed between 2010 and 2023, linking each case to environmental reviews, staff assignments, appeals, and City Council deliberations, thereby capturing the full trajectory of each project from initial filing to final approval. We complement these administrative records with more than 30,000 planning determination letters, from which we extract information on property owners, representatives, and decision makers using large language models. This work quantifies the value of political and bureaucratic connections in the entitlement process, offering new evidence on how institutional discretion and access to influence can shape urban development.
