@@ -7,7 +7,8 @@ Can transparency requirements deter organized crime, and what are the long-run c
 
 **Losing the Shield: How Political Connections Shape Environmental Enforcement**  
 *(with [Sanjana Ghosh](https://www.sanjanaghosh.com/))*  
-[Abstract](#){: .toggle-link data-target="paper3" } | [PDF](https://www.dropbox.com/scl/fi/9xlkw3g3hoqd8neqtr3qy/mainpaper.pdf?rlkey=x2di4sbenpcjjl6sfm5kg5593&e=1&st=fb4qntpk&dl=0) 
+[Abstract](#){: .toggle-link data-target="paper3" } | [PDF](https://www.dropbox.com/scl/fi/9xlkw3g3hoqd8neqtr3qy/mainpaper.pdf?rlkey=x2di4sbenpcjjl6sfm5kg5593&e=1&st=fb4qntpk&dl=0) | 
+[World Bank Blog](https://blogs.worldbank.org/en/impactevaluations/discretion-and-capture--how-politics-shapes-pollution-enforcemen)
 <div id="paper3" class="abstract">
 This paper provides novel evidence on how political connections distort environmental regulatory enforcement in Maharashtra's Sugar Industry, using a unique natural experiment that creates simultaneous bidirectional variation in political access. We exploit a political crisis in Maharashtra, India, which caused some sugar mills to suddenly lose political connections while others gained it. Combining novel data on regulatory punishment, environmental & operational outcomes for sugar mills, we find that mills losing political access experience significantly higher enforcement rates, while mills gaining connections face no change in regulatory pressure. This effect is driven entirely by discretionary enforcement rather than complaint-driven inspections. Using granular emissions monitoring data, we show that this is not driven by changes in environmental performance by mills who lose political connections, while mills gaining connections significantly increase pollution-hiding behavior yet face no regulatory consequences. These findings demonstrate systematic heterogeneity in environmental enforcement in a weak institution setting.
 </div>
