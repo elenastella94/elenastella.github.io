@@ -32,4 +32,4 @@ This project investigates how political connections shape discretionary land-use
 
 **[Dall’informazione all’azione: intelligenza artificiale e allocazione efficiente delle risorse di controllo](https://dirittoeconti.it/articolo-rivista/dallinformazione-allazione-intelligenza-artificiale-e-allocazione-efficiente-delle-risorse-di-controllo/)**  
 *Bilancio Comunità Persona*, No. 1, 2026. [In Italian]
-</div>
+
